@@ -1,0 +1,2 @@
+msgid = "E-Mail Broadcasting"
+msgstr = "Имейл до списък"

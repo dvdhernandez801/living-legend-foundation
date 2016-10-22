@@ -1,0 +1,20 @@
+<h2><a href="http://wordpress.org/extend/plugins/e-mail-broadcasting/" target="_blank">E-Mail Broadcasting help</a></h2>
+<strong>What is the <em>triggerhash</em>, and what is the point of it?</strong>
+Trigger hash, is a secret keystring that allow triggering the session sending from web without be logged as admin and allowing every user to trigger the session.
+Some hosting accounts provide an webcrontab, which is a useful tool and allow you to open url in timed. For example we will set triggerhash to <strong><em>"testhash123"</em></strong>
+and we set the webcrontab to open every hour the url <strong><u>http://{your blog url}/?e-mail-broadcasting-trigger=testhash123</u></strong>
+This will automatically send the potions in the quee (in case that we have a lot of email subscribers)
+
+<strong>Triggerhash functionality can be disabled simple with set the field blank</strong>
+
+
+Widgets that plugin add:
+* <strong>E-Mail Broadcasting</strong>
+
+Shortcodes:
+* <strong>[emailbroadcasting]</strong>                <em>Default for user subscribtion</em>
+* <strong>[emailbroadcasting unsubscribe]</strong>    <em>For user unsubscribe</em>
+
+NOTE:
+<em>If you have no correct working mail system, may be this plugin can help you (<a href="http://wordpress.org/extend/plugins/wp-mail-smtp/">http://wordpress.org/extend/plugins/wp-mail-smtp/</a>)</em>
+<em>It allow you to reconfigure the wp_mail().</em>
