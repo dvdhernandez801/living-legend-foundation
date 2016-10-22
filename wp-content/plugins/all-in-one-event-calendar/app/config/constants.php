@@ -50,7 +50,7 @@ function ai1ec_initiate_constants( $ai1ec_base_dir, $ai1ec_base_url ) {
 	// = Plugin Version =
 	// ==================
 	if ( ! defined( 'AI1EC_VERSION' ) ) {
-define( 'AI1EC_VERSION', '2.5.11' );
+define( 'AI1EC_VERSION', '2.5.12' );
 	}
 
 	// ================
@@ -301,7 +301,7 @@ define( 'AI1EC_VERSION', '2.5.11' );
 		// = Convert http:// to webcal:// in AI1EC_SCRIPT_URL =
 		// =  (webcal:// protocol does not support https://)  =
 		// ====================================================
-		$webcal_url = str_replace( 'http://', 'webcal://', AI1EC_SCRIPT_URL );
+		$webcal_url = preg_replace( '/^https?:\/\//', 'webcal://', AI1EC_SCRIPT_URL );
 		define(
 			'AI1EC_EXPORT_URL',
 			$webcal_url . '&controller=ai1ec_exporter_controller' .
